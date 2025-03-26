@@ -1,0 +1,20 @@
+name: Continuous Delivery #Nome Workflow (Fluxo de Trabalho)
+on: #Define em que momento fluxo será Rodado"Ativado / Acionado"
+       branches:
+         - main #Ou qualquer outra branch
+
+jobs:
+  Deliver: #
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      #Usar um Action que vai fazer um Upload de um arquivo Zipado
+      - name: Simulando Continuous Delivery
+        uses: actions/upload-artifact@v4
+        with:
+          name: projetozipado.zip
+          path: |
+            '**.py'
+            README.md
+            
