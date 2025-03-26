@@ -4,7 +4,7 @@ on: #Define em que momento fluxo será Rodado"Ativado / Acionado"
          - main #Ou qualquer outra branch
 
 jobs:
-  Deliver: #
+  Deliver:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -17,4 +17,3 @@ jobs:
           path: |
             '**.py'
             README.md
-            
