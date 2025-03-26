@@ -1,7 +1,8 @@
-name: Continuous Delivery #Nome Workflow (Fluxo de Trabalho)
-on: #Define em que momento fluxo será Rodado"Ativado / Acionado"
+name: Continuous Delivery
+on:
+  push:
        branches:
-         - main #Ou qualquer outra branch
+         - main
 
 jobs:
   deliver: 
@@ -15,7 +16,7 @@ jobs:
         with:
           name: projetozipado.zip
           path: |
-            '**.py'
+            **.py
             README.md
 
   deploy:
