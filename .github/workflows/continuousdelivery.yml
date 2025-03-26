@@ -1,10 +1,10 @@
-name: Continuous Delivery #Nome Workflow (Fluxo de Trabalho)
-on: #Define em que momento fluxo será Rodado"Ativado / Acionado"
+name: Continuous Delivery
+on:
        branches:
          - main #Ou qualquer outra branch
 
 jobs:
-  deliver: 
+  deliver:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -15,7 +15,7 @@ jobs:
         with:
           name: projetozipado.zip
           path: |
-            '**.py'
+            **.py
             README.md
 
   deploy:
