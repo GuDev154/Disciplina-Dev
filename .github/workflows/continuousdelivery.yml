@@ -4,12 +4,12 @@ on: #Define em que momento fluxo será Rodado"Ativado / Acionado"
          - main #Ou qualquer outra branch
 
 jobs:
-  Deliver: #
+  deliver: 
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      #Usar um Action que vai fazer um Upload de um arquivo Zipado
+
       - name: Simulando Continuous Delivery
         uses: actions/upload-artifact@v4
         with:
@@ -17,4 +17,13 @@ jobs:
           path: |
             '**.py'
             README.md
-            
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: deliver
+    steps:
+        - uses: actions/download-artifact@v4
+          with:
+            name: projetozipado.zip
+        - name: Display structure of downloaded files
+          run: ls -R
