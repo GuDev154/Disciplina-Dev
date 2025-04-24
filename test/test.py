@@ -1,4 +1,4 @@
-from main import *
+from src.main import *
 from unittest.mock import patch
 
 import pytest
