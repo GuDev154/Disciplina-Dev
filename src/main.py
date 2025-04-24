@@ -4,13 +4,8 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-
-class BaseModal:
-    pass
-
-
 class Estudante(BaseModal):
-    name: str
+    nome: str
     curso: str
     ativo: bool
 
