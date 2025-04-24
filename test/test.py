@@ -1,9 +1,4 @@
-import sys
-import os
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
-
-from main import * #Dá erro porque está sem o src. / mas quando coloca também ;)
+from main import *
 from unittest.mock import patch
 
 import pytest
