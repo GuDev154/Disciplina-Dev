@@ -1,4 +1,4 @@
-from src.main import *
+from src.main import root, funcaoteste, Estudante, create_estudante, update_estudante, delete_estudante
 from unittest.mock import patch
 
 def test_root():
