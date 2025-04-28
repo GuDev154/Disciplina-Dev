@@ -1,7 +1,10 @@
-from main import *
+from main.src import *
 from unittest.mock import patch
 
 import pytest
+
+from main import funcaoteste, root, Estudante, create_estudante, update_estudante, delete_estudante
+
 
 @pytest.mark.asyncio
 async def test_root():
