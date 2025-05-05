@@ -1,6 +1,6 @@
 import random
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 import pytest
 from unittest.mock import patch
 
@@ -42,7 +42,7 @@ async def test_create_estudante_ativo():
 
 @pytest.mark.asyncio
 async def test_create_estudante_invalido_tipo():
-    with pytest.raises(TypeError):
+    with pytest.raises(ValidationError):
         # 'ativo' deve ser bool, aqui está como string
         Estudante(name="João", curso="Biologia", ativo="sim")
 
