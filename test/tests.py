@@ -1,3 +1,4 @@
+#Realizei a inclusão dos codigos da main para tests pois estava ocorrendo um erro na importação das funções criadas na main (src.main)
 import random
 from fastapi import FastAPI
 from pydantic import BaseModel, ValidationError
